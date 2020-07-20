@@ -5,10 +5,14 @@ metadata:
     service: reverseproxy
   name: reverseproxy
 spec:
+  selector:
+    matchLabels:
+      app: reverseproxy
   replicas: 1
   template:
     metadata:
       labels:
+        app: reverseproxy
         service: reverseproxy
     spec:
       containers:
